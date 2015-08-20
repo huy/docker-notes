@@ -25,7 +25,7 @@ The client must use key signed by the same CA in order to access to the server.
 
 **docker-machine**
 
-Sometime we can't run docker daemon directly (e.g. on OSX) then we need kind of linux virtual machine to host the daemon, `docker-machine` is the command that is used to manage the virtual machine for docker daemon.
+Sometime we can't run docker daemon directly (e.g. on OSX) then we need kind of linux virtual machine to host the daemon, `docker-machine` is the command that is used to manage docker host - the virtual machine for docker daemon.
 
     $ docker-machine ls
     NAME   ACTIVE   DRIVER       STATE     URL                         SWARM
