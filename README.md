@@ -1,7 +1,6 @@
 # Using docker
 
-Docker server run as daemon on a linux host. Docker client can talk with the daemon using unix socket if it runs on the same
-host as the daemon or remotely over TCP.
+Docker server run as daemon on a linux host. Docker client can talk with the daemon using unix socket if it runs on the same host as the daemon or remotely over TCP. The remote access is over REST API.
 
 Docker server runs as root account the unix socket it created is accessible only for root. So it relies on OS for 
 security. When accessing the server remotely, docker client uses the following environment variables to determine 
@@ -18,3 +17,10 @@ must corresponds with the server starting with e.g.
         --tlsverify --tlscacert=/var/lib/boot2docker/ca.pem \
         --tlscert=/var/lib/boot2docker/server.pem \
         --tlskey=/var/lib/boot2docker/server-key.pem -s aufs
+
+The client must use key signed by the same CA in order to access to the server.
+
+References
+
+* https://docs.docker.com/reference/api/docker_remote_api/
+* https://docs.docker.com/articles/https/
