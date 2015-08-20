@@ -31,6 +31,16 @@ Sometime we can't run docker daemon directly (e.g. on OSX) then we need kind of 
     NAME   ACTIVE   DRIVER       STATE     URL                         SWARM
     dev    *        virtualbox   Running   tcp://192.168.99.100:2376
 
+`docker-machine` can give us a set of environment variables required by docker client to access a docker host
+
+    $ docker-machine env dev
+    export DOCKER_TLS_VERIFY="1"
+    export DOCKER_HOST="tcp://192.168.99.100:2376"
+    export DOCKER_CERT_PATH="/Users/huyle/.docker/machine/machines/dev"
+    export DOCKER_MACHINE_NAME="dev"
+    # Run this command to configure your shell:
+    # eval "$(docker-machine env dev)"
+
 References
 
 * https://docs.docker.com/reference/api/docker_remote_api/
