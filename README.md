@@ -1,4 +1,4 @@
-# Using docker in OSX
+# Using docker
 
 Docker server run as daemon on a linux host. Docker client can talk with the daemon using unix socket if it runs on the same
 host as the daemon or remotely over TCP.
