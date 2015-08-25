@@ -5,7 +5,7 @@
 Docker runs as daemon on a linux host. Docker client can talk with the daemon using unix socket if it runs on the same host as the daemon or remotely over TCP. The remote access is over REST API.
 
 Docker daemon runs as root account the unix socket it created is accessible only for root. So it relies on OS for 
-security. When accessing the server remotely, docker client uses the following environment variables to determine 
+security. When accessing the docker daemon remotely, docker client uses the following environment variables to determine 
 which server it is going to talk to e.g.
 
     DOCKER_HOST=tcp://192.168.99.100:2376
@@ -40,6 +40,10 @@ Sometime we can't run docker daemon directly (e.g. on OSX) then we need kind of 
     export DOCKER_MACHINE_NAME="dev"
     # Run this command to configure your shell:
     # eval "$(docker-machine env dev)"
+    
+To ssh docker host, we can simply use 
+
+    $docker-machine ssh dev
 
 References
 
