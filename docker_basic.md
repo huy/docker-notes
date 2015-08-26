@@ -1,7 +1,15 @@
 
 # Docker basic
 
-`docker` is command line interface client used to access docker daemon to operate container. 
+`docker` is command line interface client used to access docker daemon to operate image and container. 
+
+**image vs container**
+
+Docker container is instance of an image, which is light OS image without kernel, which is provided by docker host. We can create many container(s) from the same image.
+
+Container has its own lifesycle we can start/stop container and commit i.e. save it into an image.
+
+**workflow**
 
 The very basic workflow is
 
@@ -63,3 +71,6 @@ to show all containers
     96e9c48d03bf        a486da044a3f           "nginx -g 'daemon of   43 minutes ago      Exited (0) 12 minutes ago                                                        pensive_cray
     
     
+References
+
+* http://stackoverflow.com/questions/23735149/docker-image-vs-container
