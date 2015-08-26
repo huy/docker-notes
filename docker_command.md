@@ -89,6 +89,17 @@ to commit an container
         custwebsrv          latest              fea257dcf7f3        7 seconds ago       132.9 MB
         nginx               latest              a486da044a3f        6 days ago          132.9 MB
 
+**push**
+
+to push image into remotr registry, we need to associate a local image with a remote image
+
+        $docker tag elasticsearch-standalone mydocker.host.com/vertigo/elasticsearch-standalone
+        
+after that we can push the image
+
+        $docker push mydocker.host.com/vertigo/elasticsearch-standalone
+        
+
 References
 
 * http://stackoverflow.com/questions/23735149/docker-image-vs-container
