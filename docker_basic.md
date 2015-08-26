@@ -17,6 +17,7 @@ The very basic workflow is
 * pull image from a registry
 * run an image
 * query containers
+* commit container into an image
 
 **search**
 
@@ -69,8 +70,16 @@ to show all containers
     CONTAINER ID        IMAGE                  COMMAND                CREATED             STATUS                        PORTS                                              NAMES
     28aa35e4f96e        a486da044a3f           "nginx -g 'daemon of   40 minutes ago      Up 10 minutes                 0.0.0.0:32810->80/tcp, 0.0.0.0:32809->443/tcp      loving_perlman
     96e9c48d03bf        a486da044a3f           "nginx -g 'daemon of   43 minutes ago      Exited (0) 12 minutes ago                                                        pensive_cray
-    
-    
+**stop**
+
+to stop an container
+
+        $docker stop 28aa35e4f96e
+        28aa35e4f96e
+
+**commit**
+
+to commit an container
 References
 
 * http://stackoverflow.com/questions/23735149/docker-image-vs-container
