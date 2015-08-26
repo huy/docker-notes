@@ -1,5 +1,5 @@
 
-# Docker basic
+# Docker client command
 
 `docker` is command line interface client used to access docker daemon to operate image and container. 
 
