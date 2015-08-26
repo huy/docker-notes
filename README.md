@@ -80,6 +80,7 @@ The very workflow is
 
         $ docker run -d -p 80 -p 443 a486da044a3f
         28aa35e4f96e80efa291116fa5737d980bb737a2aee06f60787271871c4547d1
+  
         $ docker ps
         CONTAINER ID        IMAGE                  COMMAND                CREATED             STATUS              PORTS                                              NAMES
         28aa35e4f96e        a486da044a3f           "nginx -g 'daemon of   2 minutes ago       Up 2 minutes        0.0.0.0:32810->80/tcp, 0.0.0.0:32809->443/tcp      loving_perlman
