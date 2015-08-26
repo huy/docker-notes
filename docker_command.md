@@ -55,7 +55,10 @@ run a container from the image, the `-p` public specified container port as host
 
     $ docker run -d -p 80 -p 443 a486da044a3f
     28aa35e4f96e80efa291116fa5737d980bb737a2aee06f60787271871c4547d1
-  
+
+sometime it is good to access to the container console to check/modify configuration, in that case, we run a image in interactive mode, allocated tty and with bash command
+
+    $ docker run -t -i a486da044a3f bash
 
 **ps**
 
@@ -71,6 +74,7 @@ to show all containers
     CONTAINER ID        IMAGE                  COMMAND                CREATED             STATUS                        PORTS                                              NAMES
     28aa35e4f96e        a486da044a3f           "nginx -g 'daemon of   40 minutes ago      Up 10 minutes                 0.0.0.0:32810->80/tcp, 0.0.0.0:32809->443/tcp      loving_perlman
     96e9c48d03bf        a486da044a3f           "nginx -g 'daemon of   43 minutes ago      Exited (0) 12 minutes ago                                                        pensive_cray
+
 **stop**
 
 to stop an container
@@ -80,7 +84,7 @@ to stop an container
 
 **commit**
 
-to commit an container
+to commit an container (i.e save container to an image)
 
         $ docker commit 28aa35e4f96e custwebsrv
         fea257dcf7f323e87eb83b69449645648df8a23b20287348436c3d008c8b452b
@@ -89,6 +93,8 @@ to commit an container
         REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
         custwebsrv          latest              fea257dcf7f3        7 seconds ago       132.9 MB
         nginx               latest              a486da044a3f        6 days ago          132.9 MB
+
+we can commit both running and stopped containers.
 
 **push**
 
