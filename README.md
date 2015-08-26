@@ -59,7 +59,22 @@ The very workflow is
         jwilder/nginx-proxy                   Automated Nginx reverse proxy for docker c...   318       [OK]
         richarvey/nginx-php-fpm               Container running Nginx + PHP-FPM capable ...   63        [OK]
 
-* run docker image `docker run image`
+2. pull an image from the registry
+
+        $ docker images
+        REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+        elasticsearch       latest              bd58cf964c1b        3 weeks ago         514.9 MB
+
+        $ docker pull nginx
+        latest: Pulling from nginx
+        aface2a79f55: Pull complete
+        5dd2638d10a1: Pull complete
+        97df1ddba09e: Pull complete
+        
+        $ docker images
+        REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+        nginx               latest              a486da044a3f        6 days ago          132.9 MB
+        elasticsearch       latest              bd58cf964c1b        3 weeks ago         514.9 MB
 
 
 
