@@ -92,3 +92,4 @@ to commit an container
 References
 
 * http://stackoverflow.com/questions/23735149/docker-image-vs-container
+* http://dghubble.com/blog/posts/docker-quicksheet/
