@@ -45,6 +45,26 @@ To ssh docker host, we can simply use
 
     $docker-machine ssh dev
 
+**docker**
+
+`docker` is command line interface client used to access docker daemon to operate container. 
+
+The very workflow is
+
+1. search for docker image using `docker search [docker-registry/]keyword` - the default docker registry is docker hub currently hosted in `hub.docker.com`
+
+    docker search nginx
+    NAME                                  DESCRIPTION                                     STARS     OFFICIAL   AUTOMATED
+    nginx                                 Official build of Nginx.                        1260      [OK]
+    jwilder/nginx-proxy                   Automated Nginx reverse proxy for docker c...   318                  [OK]
+    richarvey/nginx-php-fpm               Container running Nginx + PHP-FPM capable ...   63                   [OK]
+
+* 
+
+* run docker image `docker run image`
+
+
+
 References
 
 * https://docs.docker.com/reference/api/docker_remote_api/
