@@ -45,47 +45,6 @@ To ssh docker host, we can simply use
 
     $docker-machine ssh dev
 
-**docker**
-
-`docker` is command line interface client used to access docker daemon to operate container. 
-
-The very basic workflow is
-
-1. search for docker image using `docker search [docker-registry/]keyword` - the default docker registry is docker hub currently hosted in `hub.docker.com`
-
-        $docker search nginx
-        NAME                                  DESCRIPTION                                     STARS     OFFICIAL 
-        nginx                                 Official build of Nginx.                        1260      [OK]
-        jwilder/nginx-proxy                   Automated Nginx reverse proxy for docker c...   318       [OK]
-        richarvey/nginx-php-fpm               Container running Nginx + PHP-FPM capable ...   63        [OK]
-
-2. pull an image from the registry
-
-        $ docker images
-        REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-        elasticsearch       latest              bd58cf964c1b        3 weeks ago         514.9 MB
-
-        $ docker pull nginx
-        latest: Pulling from nginx
-        aface2a79f55: Pull complete
-        5dd2638d10a1: Pull complete
-        97df1ddba09e: Pull complete
-        
-        $ docker images
-        REPOSITORY          TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-        nginx               latest              a486da044a3f        6 days ago          132.9 MB
-        elasticsearch       latest              bd58cf964c1b        3 weeks ago         514.9 MB
-
-3. run a container from the image, the `-p` public specified container port as host port 
-
-        $ docker run -d -p 80 -p 443 a486da044a3f
-        28aa35e4f96e80efa291116fa5737d980bb737a2aee06f60787271871c4547d1
-  
-        $ docker ps
-        CONTAINER ID        IMAGE                  COMMAND                CREATED             STATUS              PORTS                                              NAMES
-        28aa35e4f96e        a486da044a3f           "nginx -g 'daemon of   2 minutes ago       Up 2 minutes        0.0.0.0:32810->80/tcp, 0.0.0.0:32809->443/tcp      loving_perlman
-
-
 References
 
 * https://docs.docker.com/reference/api/docker_remote_api/
