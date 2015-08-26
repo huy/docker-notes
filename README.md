@@ -49,7 +49,7 @@ To ssh docker host, we can simply use
 
 `docker` is command line interface client used to access docker daemon to operate container. 
 
-The very workflow is
+The very basic workflow is
 
 1. search for docker image using `docker search [docker-registry/]keyword` - the default docker registry is docker hub currently hosted in `hub.docker.com`
 
