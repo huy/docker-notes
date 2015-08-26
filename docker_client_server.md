@@ -1,6 +1,6 @@
-# Using docker
+# Client/server communication
 
-**Docker client/server communication**
+**the server**
 
 Docker runs as daemon on a linux host. Docker client can talk with the daemon using unix socket if it runs on the same host as the daemon or remotely over TCP. The remote access is over REST API.
 
@@ -44,6 +44,10 @@ Sometime we can't run docker daemon directly (e.g. on OSX) then we need kind of 
 To ssh docker host, we can simply use 
 
     $docker-machine ssh dev
+
+**the client**
+
+`docker` binary is both client and server. The client part of `docker` is often used as primary way to control `image` and `container` but there can be different clients e.g. maven docker plugin.
 
 References
 
