@@ -13,11 +13,12 @@ Container has its own lifesycle we can start/stop container and commit i.e. save
 
 The very basic workflow is
 
-* search for a image in a registry
-* pull image from a registry
+* search for a image in a remote registry
+* pull image from the registry to the docker host
 * run an image
 * query containers
 * commit container into an image
+* push the image to the registry
 
 **search**
 
