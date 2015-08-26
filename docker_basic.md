@@ -39,7 +39,7 @@ pull an image from the registry
     nginx               latest              a486da044a3f        6 days ago          132.9 MB
     elasticsearch       latest              bd58cf964c1b        3 weeks ago         514.9 MB
 
-**run **
+**run**
 
 run a container from the image, the `-p` public specified container port as host port 
 
