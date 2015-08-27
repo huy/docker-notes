@@ -1,6 +1,9 @@
-# Client/server communication
+# Basic concepts
 
-Docker works in client/server fashion. Docker server aka engine aka daemon receives a command the client and execute it onbehalf. The `docker` binary includes both client and server code, which sometimes creates a confusion. 
+**client server mode**
+
+Docker can work in client/server mode when docker server receives a command the client and execute it onbehalf. 
+
 Docker runs as daemon on a linux host. Docker client can talk with the daemon using unix socket if it runs on the same host as the daemon or remotely over TCP. The remote access is over REST API.
 
 **the server**
