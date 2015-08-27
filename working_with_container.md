@@ -69,6 +69,23 @@ to show all containers
     28aa35e4f96e        a486da044a3f           "nginx -g 'daemon of   40 minutes ago      Up 10 minutes                 0.0.0.0:32810->80/tcp, 0.0.0.0:32809->443/tcp      loving_perlman
     96e9c48d03bf        a486da044a3f           "nginx -g 'daemon of   43 minutes ago      Exited (0) 12 minutes ago                                                        pensive_cray
 
+**exec**
+
+exec command allow use to access to the container interactively
+
+        $ docker ps
+        CONTAINER ID        IMAGE                                                         COMMAND                CREATED             STATUS              PORTS                                              NAMES
+        8bb22139487a        docker.atlassian.io/vertigo/elasticsearch-standalone:latest   "/docker-entrypoint.   3 hours ago         Up 3 hours          0.0.0.0:32771->9200/tcp, 0.0.0.0:32770->9300/tcp   hopeful_brown
+        
+        $ docker exec -it 8bb22139487a bash
+        root@8bb22139487a:/# ps -ef
+        UID        PID  PPID  C STIME TTY          TIME CMD
+        elastic+     1     0  0 04:02 ?        00:00:45 /usr/bin/java -Xms256m -Xmx1g -D
+        root        51     0  1 06:02 ?        00:00:00 bash
+        root        58    51  0 06:02 ?        00:00:00 ps -ef
+        root@8bb22139487a:/# exit
+        
+
 **stop**
 
 to stop an container
