@@ -16,7 +16,7 @@ The very basic workflow is
 
 **search**
 
-Ssearch for docker image using `docker search [docker-registry/]keyword` - the default docker registry is docker hub currently hosted in `hub.docker.com`
+The syntax is `docker search [docker-registry/]keyword` - the default docker registry is docker hub currently hosted in `hub.docker.com`
 
         $docker search nginx
         NAME                                  DESCRIPTION                                     STARS     OFFICIAL 
@@ -50,9 +50,6 @@ run a container from the image, the `-p` public specified container port as host
     $ docker run -d -p 80 -p 443 a486da044a3f
     28aa35e4f96e80efa291116fa5737d980bb737a2aee06f60787271871c4547d1
 
-sometime it is good to access to the container console to check/modify configuration, in that case, we run a image in interactive mode, allocated tty and with bash command
-
-    $ docker run -t -i a486da044a3f bash
 
 **ps**
 
