@@ -36,12 +36,14 @@ to commit an container (i.e save container to an image)
 
 we can commit both running and stopped containers.
 
-**tag and push**
+**tag**
 
 to push image into remotr registry, we need to associate a local image with a remote image
 
         $docker tag elasticsearch-standalone mydocker.host.com/vertigo/elasticsearch-standalone
-        
+
+**push**
+
 after that we can push the image
 
         $docker push mydocker.host.com/vertigo/elasticsearch-standalone
@@ -66,9 +68,9 @@ to build image we need to
 
         $docker build ./elasticsearch
 
-**tag and push**
+**tag**
 
-to push image into remote registry, we need to associate a local image with a remote image
+tag refer to association a local image with a remote image
         
         $ docker images
         REPOSITORY                                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
