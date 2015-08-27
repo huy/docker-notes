@@ -3,12 +3,6 @@
 
 `docker` is command line interface client used to access docker daemon to operate image and container. 
 
-**image vs container**
-
-Docker container is instance of an image, which is light OS image without kernel, which is provided by docker host. We can create many container(s) from the same image.
-
-Container has its own lifesycle we can start/stop container and commit i.e. save it into an image.
-
 **workflow**
 
 The very basic workflow is
