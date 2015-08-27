@@ -64,17 +64,12 @@ to build image we need to
         drwxr-xr-x  3 huyle  staff   102 27 Aug 14:43 config
         -rwxr-xr-x  1 huyle  staff   552 27 Aug 14:43 docker-entrypoint.sh
 
-**build**
+**build and tag**
 
-        $docker build ./elasticsearch
-
-**tag**
-
-tag refer to association a local image with a remote image
-        
-        $ docker images
-        REPOSITORY                                             TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-        <none>                                                 <none>              7209691a599e        16 minutes ago      522.1 MB
-    
-        $docker tag 7209691a599e:1.7 elasticsearch-fresh
-        
+        $ docker build -t elasticsearch-fresh:1.7 elasticsearch
+        Sending build context to Docker daemon 6.144 kB
+        Sending build context to Docker daemon
+        Step 0 : FROM java:8-jre
+         ---> ff23c187d5c6
+        Step 1 : RUN gpg --keyserver ha.pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
+         ---> Running in 0b4532abdd1e        
