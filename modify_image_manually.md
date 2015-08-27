@@ -1,13 +1,4 @@
-# Working with image
-
-Docker image is a file, which can be store in the local file system or hosted on remote server aka docker registry. For sake of saving disk space and peformance, an image is placed on top of the other, which in turn is on top of the next one and so on.
-
-Image can be created either 
-
-* manually 
-* automatically usimg Dockerfile
-
-## Modify image manually
+# Modify image manually
 
 To manually modify a image, we 
 
