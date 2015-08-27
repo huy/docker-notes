@@ -2,16 +2,16 @@
 
 To manually modify a image, we 
 
-* run an base image interactively using shell as command to gain access to the container console
+* access running container interactively
 * change the running container configuration using available command line tools e.g. `vim`
 * commit the running container to a new image
 * tag and push the new image to docker registry
 
-**run**
+**access**
 
 to run an image interactively
 
-        $ docker run -t -i --entrypoint="/bin/bash" elasticsearch-fresh:1.7
+        $ docker exec -t -i 8bb22139487a bash
 
 **commit**
 
